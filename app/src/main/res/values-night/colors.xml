@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NIGHT -->
+<resources>
+    <color name="light_grey">#818384</color>
+    <color name="boxBorder">#3a3a3c</color>
+    <color name="boxGrey">#3a3a3c</color>
+    <color name="boxYellow">#b59f3b</color>
+    <color name="boxGreen">#538d4e</color>
+    <color name="buttonYellow">#55b59f3b</color>
+    <color name="buttonGreen">#55538d4e</color>
+    <color name="txtColor">#ffffff</color>
+    <color name="background">#121213</color>
+    <color name="resultsbtndisabled">#818384</color>
+
+</resources>

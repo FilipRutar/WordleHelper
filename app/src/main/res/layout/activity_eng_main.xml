@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EngMain">
+
+
+    <LinearLayout
+        android:id="@+id/GuessRow0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/guess00"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:onClick="engSelectColor"/>
+
+        <TextView
+            android:id="@+id/guess01"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:onClick="engSelectColor"/>
+
+        <TextView
+            android:id="@+id/guess02"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor"/>
+
+        <TextView
+            android:id="@+id/guess03"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor"/>
+
+        <TextView
+            android:id="@+id/guess04"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GuessRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GuessRow0">
+
+        <TextView
+            android:id="@+id/guess10"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess11"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess12"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess13"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess14"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GuessRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GuessRow1">
+
+        <TextView
+            android:id="@+id/guess20"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess21"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess22"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess23"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess24"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GuessRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GuessRow2">
+
+        <TextView
+            android:id="@+id/guess30"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess31"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess32"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess33"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess34"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GuessRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GuessRow3">
+
+        <TextView
+            android:id="@+id/guess40"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess41"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess42"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess43"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess44"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GuessRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GuessRow4">
+
+        <TextView
+            android:id="@+id/guess50"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess51"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess52"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess53"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+
+        <TextView
+            android:id="@+id/guess54"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:onClick="engSelectColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resultsButtonWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/topRow"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/getBestGuesses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:enabled="false"
+            android:background="@drawable/button_yellow"
+            android:padding="10dp"
+            android:textColor="@drawable/resultsbtntxt"
+            android:onClick="getBestGuesses"
+            android:text="@string/get_guesses" />
+
+        <Button
+            android:id="@+id/getResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:enabled="false"
+            android:background="@drawable/button_green"
+            android:padding="10dp"
+            android:textColor="@drawable/resultsbtntxt"
+            android:onClick="getResults"
+            android:text="@string/get_results"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_enter"
+            style="@style/myCustomButton"
+            android:layout_width="18dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="ENTER"
+            android:textSize="12dp"/>
+
+        <Button
+            android:id="@+id/button_Z"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="Z" />
+
+        <Button
+            android:id="@+id/button_X"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="X" />
+
+        <Button
+            android:id="@+id/button_C"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/button_V"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="V" />
+
+        <Button
+            android:id="@+id/button_B"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="B" />
+
+        <Button
+            android:id="@+id/button_N"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="N" />
+
+        <Button
+            android:id="@+id/button_M"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="M" />
+
+        <Button
+            android:id="@+id/button_del"
+            style="@style/myCustomButton"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="\u232B" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/middleRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_A"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="A" />
+
+        <Button
+            android:id="@+id/button_S"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="S" />
+
+        <Button
+            android:id="@+id/button_D"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="D" />
+
+        <Button
+            android:id="@+id/button_F"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="F" />
+
+        <Button
+            android:id="@+id/button_G"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="G" />
+
+        <Button
+            android:id="@+id/button_H"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="H" />
+
+        <Button
+            android:id="@+id/button_J"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="J" />
+
+        <Button
+            android:id="@+id/button_K"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="K" />
+
+        <Button
+            android:id="@+id/button_L"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="L" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/middleRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_Q"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="Q" />
+
+        <Button
+            android:id="@+id/button_W"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="W" />
+
+        <Button
+            android:id="@+id/button_E"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="E" />
+
+        <Button
+            android:id="@+id/button_R"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="R" />
+
+        <Button
+            android:id="@+id/button_T"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="T" />
+
+        <Button
+            android:id="@+id/button_Y"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="Y" />
+
+        <Button
+            android:id="@+id/button_U"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="U" />
+
+        <Button
+            android:id="@+id/button_I"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="I" />
+
+        <Button
+            android:id="@+id/button_O"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="O" />
+
+        <Button
+            android:id="@+id/button_P"
+            style="@style/myCustomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="engEnterLetter"
+            android:text="P" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/results_text_box"
+        android:fillViewport="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/resultsButtonWrapper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/resultsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/buttonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings_icon"
+        app:tint="@color/boxGrey"
+        android:onClick="openSettings"/>
+
+    <ImageButton
+        android:id="@+id/buttonHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/help_icon"
+        app:tint="@color/boxGrey"
+        android:onClick="openHelp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

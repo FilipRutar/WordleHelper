@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/TitleRow0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/Letter00"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:text="W"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter01"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:text="O"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter02"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="R"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter03"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="D"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter04"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="L"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter05"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="E"
+            android:onClick="titleSelectColor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TitleRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TitleRow0">
+
+
+        <TextView
+            android:id="@+id/Letter10"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:text="H"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter11"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:text="E"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter12"
+            style="@style/myCustomTextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/box_empty"
+            android:gravity="center"
+            android:onClick="titleSelectColor"
+            android:text="L"/>
+
+        <TextView
+            android:id="@+id/Letter13"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="P"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter14"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="E"
+            android:onClick="titleSelectColor"/>
+
+        <TextView
+            android:id="@+id/Letter15"
+            style="@style/myCustomTextView"
+            android:background="@drawable/box_empty"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="R"
+            android:onClick="titleSelectColor"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_empty"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <TextView
+            android:id="@+id/selectMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/select_mode" />
+
+        <Button
+            android:id="@+id/btn_slo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/button_green"
+            android:onClick="StartSlo"
+            android:padding="10dp"
+            android:text="BESEDLE"
+            android:textColor="@drawable/resultsbtntxt" />
+
+        <Button
+            android:id="@+id/btn_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/button_green"
+            android:onClick="StartEng"
+            android:padding="10dp"
+            android:text="WORDLE"
+            android:textColor="@drawable/resultsbtntxt" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings_icon"
+        app:tint="@color/boxGrey"
+        android:onClick="openSettings"/>
+
+    <ImageButton
+        android:id="@+id/buttonHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/help_icon"
+        app:tint="@color/boxGrey"
+        android:onClick="openHelp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created by Filip Rutar"
+        android:textSize="10sp"
+        android:textColor="@color/boxGrey"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
