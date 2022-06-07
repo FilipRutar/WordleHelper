@@ -146,6 +146,7 @@ public class DatabaseTable {
         // sestavimo string where (where) WORD LIKE ? AND NOT LIKE ? ...
         // pogoji so v arrayu v formatu _x___ in jih query builder vstavi namesto ?
         // z for zanko gremo cez vse crke in ustvarimo ustrezen sql odsek
+        //TODO manjsa izboljsava - ce je ista crka rumena/zelena in siva vemo da nastopa samo 1x, trenutno je lahko tudi veckrat
         StringBuilder selection = new StringBuilder("");
         List<String> argumentsList = new ArrayList<String>();
         SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
@@ -240,8 +241,12 @@ public class DatabaseTable {
         // sestavimo string where (where) WORD LIKE ? AND NOT LIKE ? ...
         // pogoji so v arrayu v formatu _x___ in jih query builder vstavi namesto ?
         // z for zanko gremo cez vse crke in ustvarimo ustrezen sql odsek
-        StringBuilder selection = new StringBuilder("");
-        List<String> argumentsList = new ArrayList<String>();
+        StringBuilder selectionZ = new StringBuilder("");
+        List<String> argumentsListZ = new ArrayList<String>();
+        StringBuilder selectionR = new StringBuilder("");
+        List<String> argumentsListR = new ArrayList<String>();
+        StringBuilder selectionS = new StringBuilder("");
+        List<String> argumentsListS = new ArrayList<String>();
         SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
 
         if (lang.matches("eng")) {
@@ -251,37 +256,58 @@ public class DatabaseTable {
         }
 
         //sestavi sql query za vse crke
-        //TODO ce ni zadetkov pametno sprosti zahteve (ne  upostevaj vseh pogojev)
+        //ce ni zadetkov sprosti zahteve (ne  upostevaj vseh pogojev)
+        //sive zelene rumene, v tem zaporedju da jih odstranimo v obratnem
+        //rumene se ne vemo kje so zato so najboljse da jih ponovno poskusimo
+        //ce to slucajno ni dovolj so naslednje na vrsti zelene
+        //TODO manjsa izboljsava bi bila da namesto da sploh ni rumene crke najprej poskusimo da je ni na tem mestu
         for (int row = 0; row < activeRow; row++){
             for (int col = 0; col < 5; col++){
                 switch (letterArray[row][col][1]){
                     case 'z':
                         String zelenaNotLike = "%" + letterArray[row][col][0] +"%";
-                        selection.append(COL_WORD).append(" NOT LIKE ? AND ");
-                        argumentsList.add(zelenaNotLike);
+                        selectionZ.append(COL_WORD).append(" NOT LIKE ? AND ");
+                        argumentsListZ.add(zelenaNotLike);
                         break;
                     case 'r':
                         String rumenaNotLike = "%" + letterArray[row][col][0] +"%";
-                        selection.append(COL_WORD).append(" NOT LIKE ? AND ");
-                        argumentsList.add(rumenaNotLike);
+                        selectionR.append(COL_WORD).append(" NOT LIKE ? AND ");
+                        argumentsListR.add(rumenaNotLike);
                         break;
                     case 's':
                         String SivaNotLike = "%" + letterArray[row][col][0] +"%";
-                        selection.append(COL_WORD).append(" NOT LIKE ? AND ");
-                        argumentsList.add(SivaNotLike);
+                        selectionS.append(COL_WORD).append(" NOT LIKE ? AND ");
+                        argumentsListS.add(SivaNotLike);
                         break;
                 }
             }
         }
 
-        selection.delete(selection.length() - 5, selection.length()); //zbrisemo zadnji AND
-        Log.d("sql string", String.valueOf(selection));
-        Log.d("sql values", String.valueOf(argumentsList));
-        String[] arrayString = argumentsList.toArray(new String[0]); //iz arraylist v array
+        selectionS.append(selectionZ).append(selectionR);
+        argumentsListS.addAll(argumentsListZ);
+        argumentsListS.addAll(argumentsListR);
+
+        selectionS.delete(selectionS.length() - 5, selectionS.length()); //zbrisemo zadnji AND
+        Log.d("sql string", String.valueOf(selectionS));
+        Log.d("sql values", String.valueOf(argumentsListS));
+        String[] arrayString = argumentsListS.toArray(new String[0]); //iz arraylist v array
 
         //vrnemo max 20 nakljucnih besed ki ustrezajo
         Cursor cursor = builder.query(databaseOpenHelper.getReadableDatabase(),
-                null, String.valueOf(selection), arrayString, null, null, "RANDOM()", "20");
+                null, String.valueOf(selectionS), arrayString, null, null, "RANDOM()", "20");
+
+        //zagotovimo da cursor vrne vec kot 5 besed
+        while (!cursor.moveToFirst() || cursor.getCount() < 5){
+            //zbrisemo zadnji not like in argument, dokler query ne vrne rezultata
+            selectionS.delete(selectionS.length() - 20, selectionS.length());
+            argumentsListS.remove(argumentsListS.size() - 1);
+            Log.d("sql string", String.valueOf(selectionS));
+            Log.d("sql values", String.valueOf(argumentsListS));
+            arrayString = argumentsListS.toArray(new String[0]); //iz arraylist v array
+            cursor = builder.query(databaseOpenHelper.getReadableDatabase(),
+                    null, String.valueOf(selectionS), arrayString, null, null, "RANDOM()", "20");
+
+        }
 
         if (cursor == null) {
             return null;
@@ -290,7 +316,6 @@ public class DatabaseTable {
             return null;
         }
         return cursor;
-
     }
 
     public boolean validateWord(String word, String lang){
