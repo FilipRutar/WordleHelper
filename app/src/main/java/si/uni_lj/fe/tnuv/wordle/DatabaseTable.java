@@ -151,8 +151,6 @@ public class DatabaseTable {
         SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
         //ce je difficulty true/hard izberemo vse besede, sicer samo mozne odgovore, tudi jezik
 
-        //TODO pravilno filtriraj ce je vec istih crk ()
-
         if (diff && lang.matches("eng")) {
             builder.setTables(TABLE_NAMES[0]);
         }else if (!diff && lang.matches("eng")){
@@ -177,13 +175,42 @@ public class DatabaseTable {
                         StringBuilder rumenaNotLike = new StringBuilder("_____");
                         rumenaNotLike.setCharAt(col, letterArray[row][col][0]);
                         selection.append(COL_WORD).append(" LIKE ? AND ").append(COL_WORD).append(" NOT LIKE ? AND ");
+                        //trenutno crko primerjamo z ostalimi crkami v vrstici
+                        //za vsako isto ne sivo crko dodamo pogoj da je ena vec v besedi
+
+                        for (int i = 0; i < 5; i++) {
+
+                            if (letterArray[row][col][0] == letterArray[row][i][0] && letterArray[row][i][1] != 's' && i != col){
+                                rumenaLike = rumenaLike + letterArray[row][col][0] +"%";
+
+                            }
+                        }
                         argumentsList.add(rumenaLike);
                         argumentsList.add(String.valueOf(rumenaNotLike));
                         break;
                     case 's':
-                        String SivaNotLike = "%" + letterArray[row][col][0] +"%";
-                        selection.append(COL_WORD).append(" NOT LIKE ? AND ");
-                        argumentsList.add(SivaNotLike);
+                        // trenutno crko primerjamo z vsemi ostalimi v vrstici
+                        // ce obstaja ista crka (ki ni siva) spremenimo iz not like %x%
+                        // v not like __x__ (brisemo samo besede s crko na tem mestu)
+                        boolean duplicateLetter = false;
+                        for (int i = 0; i < 5; i++) {
+                            // preverimo ali je ista crka (ne na istem mestu) in ni siva
+                            if (letterArray[row][col][0] == letterArray[row][i][0] && letterArray[row][i][1] != 's' && i != col){
+                                duplicateLetter = true;
+                                break;
+                            }
+                        }
+
+                        if (duplicateLetter) {
+                            StringBuilder sivaNotLike = new StringBuilder("_____");
+                            sivaNotLike.setCharAt(col, letterArray[row][col][0]);
+                            selection.append(COL_WORD).append(" NOT LIKE ? AND ");
+                            argumentsList.add(String.valueOf(sivaNotLike));
+                        } else {
+                            String sivaNotLike = "%" + letterArray[row][col][0] +"%";
+                            selection.append(COL_WORD).append(" NOT LIKE ? AND ");
+                            argumentsList.add(sivaNotLike);
+                        }
                         break;
                 }
             }
