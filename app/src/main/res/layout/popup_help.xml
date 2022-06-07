@@ -39,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/help"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,6 +47,17 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <TextView
+        android:id="@+id/helpPopuptitle2"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:breakStrategy="high_quality"
+        android:text="Welcome to Wordle Helper!"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/helpPopuphelp"
@@ -57,7 +69,7 @@
         android:layout_marginEnd="10dp"
         android:breakStrategy="high_quality"
         android:text="@string/helptext"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
 
 

@@ -3,13 +3,13 @@
     <string name="warningNoResults">No results, check your letters</string>
     <string name="settingsDiffHelp">Hard shows all matching words\nwhile easy shows only possible answers.</string>
     <string name="preference_file_key">difficulty</string>
-    <string name="helptext">Welcome to Wordle Helper\n\nUse the keyboard to enter letters and press ENTER to confirm.\nClick letter boxes and match colors to your game.\nClick GET RESULTS to see words that fit your current constraints.\nClick GET GUESSES to see words that contain letters you haven\'t tried yet.</string>
+    <string name="helptext">Use the keyboard to enter letters and press ENTER to confirm.\nClick letter boxes and match colors to your game.\nClick GET RESULTS to see words that fit your current constraints.\nClick GET GUESSES to see words that contain letters you haven\'t tried yet.</string>
     <string name="warningNoGuess">Can\'t find any words not containing given letters</string>
     <string name="title">Wordle Helper</string>
     <string name="get_guesses">Get Guesses</string>
     <string name="get_results">Get Results</string>
-    <string name="help">Help</string>
-    <string name="settings">Settings</string>
+    <string name="help">HELP</string>
+    <string name="settings">SETTINGS</string>
     <string name="difficulty">Difficulty</string>
     <string name="easy">EASY</string>
     <string name="hard">HARD</string>
